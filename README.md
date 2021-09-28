@@ -93,7 +93,7 @@ idx <- result$indexes
 idx
 ```
 
-The object `idx` can be used to `subset()` the `d`. To get the complete data set for the outlier observations, we do
+The object `idx` can be used to `subset()` the object `d`. To get the complete data set for the outlier observations, we do
 
 ```r
 ## data for outlier observations

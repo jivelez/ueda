@@ -141,7 +141,7 @@
 <code class="sourceCode R"><span class="co">## indexes of outliers</span>
 <span class="va">idx</span> <span class="op">&lt;-</span> <span class="va">result</span><span class="op">$</span><span class="va">indexes</span>
 <span class="va">idx</span></code></pre></div>
-<p>The object <code>idx</code> can be used to <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code> the <code>d</code>. To get the complete data set for the outlier observations, we do</p>
+<p>The object <code>idx</code> can be used to <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code> the object <code>d</code>. To get the complete data set for the outlier observations, we do</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">## data for outlier observations</span>
 <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">d</span>, <span class="va">idx</span><span class="op">)</span></code></pre></div>
