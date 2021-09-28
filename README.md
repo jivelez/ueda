@@ -4,7 +4,6 @@
 
 # ueda  <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
-
 An R package with useful functions to automatically detect and remove outliers via the Ueda's method.  For more information see
 
 Marmolejo-Ramos, F., Vélez, J.I. & Romão, X. Automatic detection of discordant outliers via the Ueda's method. _J Stat Distrib App_ **2**, 8 (2015). https://doi.org/10.1186/s40488-015-0031-y
