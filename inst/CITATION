@@ -1,0 +1,20 @@
+citHeader("To cite ueda in publications use:")
+
+bibentry(bibtype = "Manual",
+         title = "{ueda}: An R package with useful functions to automatically detect and remove outliers via the Ueda's method",
+         author = c(person("Jorge I.", "Vélez"),
+                    person("Luis F.", "Machado"),
+                    person("Freddy", "Hernández")),
+         year = 2015,
+         note = "R package version 0.1.0",
+         url = "https://github.com/jivelez/ueda")
+
+
+bibentry(bibtype = "Article",
+         title = "Automatic detection of discordant outliers via the Ueda's method",
+       author = c(person("Fernando", "Marmolejo-Ramos"),
+                    person("Jorge I.", "Vélez"),
+                    person("Xavier", "Romão")),
+        journal = "J Stat Distrib App",
+         year = {2015},
+         url = "httpshttps://jsdajournal.springeropen.com/articles/10.1186/s40488-015-0031-y")
