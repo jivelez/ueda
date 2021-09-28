@@ -1,6 +1,6 @@
 Package: ueda
 Type: Package
-Title: Automatic Detection of Discordant Outliers via Ueda's method.
+Title: Automatic Detection of Discordant Outliers via Ueda's method
 Version: 0.1.0
 Author: Jorge I. Vélez <jvelezv@uninorte.edu.co>, Luis F. Machado <lfmachado@uninorte.edu.co>
 Maintainer: Jorge I. Vélez <jvelezv@uninorte.edu.co>
