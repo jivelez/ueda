@@ -39,7 +39,7 @@ x <- sample(x)
 x
 ```
 
-To get the full output after applying Ueda's method on this data, we use the `find_ueda_outliers()` outliers as follows. In this particular case, we use `smax = 5` to detect up to 5 outliers in the numeric vector `x`:
+To get the full output after applying Ueda's method on this data, we use the `find_ueda_outliers()` function. In this particular case, we use `smax = 5` to detect up to 5 outliers in the numeric vector `x`:
 
 ```r
 # run full Ueda's method and detect up to 5 outliers

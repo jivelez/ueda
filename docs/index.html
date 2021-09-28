@@ -102,7 +102,7 @@
 <span class="co"># shuffle the data</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="va">x</span></code></pre></div>
-<p>To get the full output after applying Ueda’s method on this data, we use the <code><a href="reference/find_ueda_outliers.html">find_ueda_outliers()</a></code> outliers as follows. In this particular case, we use <code>smax = 5</code> to detect up to 5 outliers in the numeric vector <code>x</code>:</p>
+<p>To get the full output after applying Ueda’s method on this data, we use the <code><a href="reference/find_ueda_outliers.html">find_ueda_outliers()</a></code> function. In this particular case, we use <code>smax = 5</code> to detect up to 5 outliers in the numeric vector <code>x</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># run full Ueda's method and detect up to 5 outliers</span>
 <span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/find_ueda_outliers.html">find_ueda_outliers</a></span><span class="op">(</span><span class="va">x</span>, smax <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
