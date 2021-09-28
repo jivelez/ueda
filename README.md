@@ -9,12 +9,11 @@ An R package with useful functions to automatically detect and remove outliers v
 
 Marmolejo-Ramos, F., Vélez, J.I. & Romão, X. Automatic detection of discordant outliers via the Ueda's method. J Stat Distrib App **2**, 8 (2015). https://doi.org/10.1186/s40488-015-0031-y
 
-You can visit the [package website](https://fhernanb.github.io/stests/index.html) to explore the vignettes (articles) and function reference. 
+You can visit the [package website](https://jivelez.github.io/ueda/index.html) to explore the vignettes (articles) and function reference. 
 
 ### Installation
 
 To install the latest development version of the package from GitHub use:
-
 
 ```r
 if(!require('devtools')) install.packages('devtools')

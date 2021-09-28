@@ -15,7 +15,7 @@ ueda_remove(x, smax = 3)
 The numeric vector `x` with no outliers. When no outliers are detected, the function returns the input numeric vector `x`.
 }
 \description{
-A generic functin to remove outliers in a numeric vector using Ueda's method.
+A generic function to remove outliers in a numeric vector using Ueda's method.
 }
 \examples{
 # random seed for reproducibility
