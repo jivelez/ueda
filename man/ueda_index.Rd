@@ -4,7 +4,7 @@
 \alias{ueda_index}
 \title{Find indexes and positions}
 \usage{
-ueda_index(x, smax = 3)
+ueda_index(x, smax = 5)
 }
 \arguments{
 \item{x}{A numeric vector}

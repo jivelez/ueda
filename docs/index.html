@@ -28,8 +28,6 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
-
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -42,12 +40,18 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ueda</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+<li>
+  <a href="index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -68,19 +72,19 @@
 
 <div id="ueda-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#ueda-" class="anchor" aria-hidden="true"></a>ueda <img src="reference/figures/logo.png" align="right" alt="" width="120">
+<a href="#ueda-" class="anchor"></a>ueda <img src="reference/figures/logo.png" align="right" alt="" width="120">
 </h1></div>
 <hr>
 <p>An R package with useful functions to automatically detect and remove outliers via the Ueda’s method. For more information see</p>
-<p>Marmolejo-Ramos, F., Vélez, J.I. &amp; Romão, X. Automatic detection of discordant outliers via the Ueda’s method. J Stat Distrib App <strong>2</strong>, 8 (2015). <a href="https://doi.org/10.1186/s40488-015-0031-y" class="external-link uri">https://doi.org/10.1186/s40488-015-0031-y</a></p>
-<p>You can visit the <a href="https://fhernanb.github.io/stests/index.html" class="external-link">package website</a> to explore the vignettes (articles) and function reference.</p>
+<p>Marmolejo-Ramos, F., Vélez, J.I. &amp; Romão, X. Automatic detection of discordant outliers via the Ueda’s method. J Stat Distrib App <strong>2</strong>, 8 (2015). <a href="https://doi.org/10.1186/s40488-015-0031-y" class="uri">https://doi.org/10.1186/s40488-015-0031-y</a></p>
+<p>You can visit the <a href="https://fhernanb.github.io/stests/index.html">package website</a> to explore the vignettes (articles) and function reference.</p>
 <div id="installation" class="section level3">
 <h3 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h3>
+<a href="#installation" class="anchor"></a>Installation</h3>
 <p>To install the latest development version of the package from GitHub use:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">'devtools'</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span>
-<span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st">'ueda'</span><span class="op">)</span><span class="op">)</span> <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'jivelez/ueda'</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/">'devtools'</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span>
+<span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st">'ueda'</span><span class="op">)</span><span class="op">)</span> <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">'jivelez/ueda'</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 
@@ -88,41 +92,36 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="license">
-<h2 data-toc-skip>License</h2>
+<h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
 </ul>
 </div>
-
-
 <div class="developers">
-<h2 data-toc-skip>Developers</h2>
+<h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Jorge I. Vélez <br><small class="roles"> Maintainer </small>  </li>
 </ul>
 </div>
 
-<div class="dev-status">
-<h2 data-toc-skip>Dev status</h2>
+  <div class="dev-status">
+<h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://travis-ci.org/jivelez/ueda" class="external-link"><img src="https://travis-ci.org/jivelez/ueda.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://cran.r-project.org/package=ueda" class="external-link"><img src="http://www.r-pkg.org/badges/version-ago/ueda" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://cran.r-project.org/package=ueda" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/ueda" alt="CRAN_Download_Badge"></a></li>
+<li><a href="https://travis-ci.org/jivelez/ueda"><img src="https://travis-ci.org/jivelez/ueda.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://cran.r-project.org/package=ueda"><img src="http://www.r-pkg.org/badges/version-ago/ueda" alt="CRAN_Status_Badge"></a></li>
+<li><a href="https://cran.r-project.org/package=ueda"><img src="http://cranlogs.r-pkg.org/badges/ueda" alt="CRAN_Download_Badge"></a></li>
 </ul>
 </div>
-
-  </div>
+</div>
 </div>
 
 
       <footer><div class="copyright">
-  <p></p>
-<p>Developed by Jorge I. Vélez.</p>
+  <p>Developed by Jorge I. Vélez.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
@@ -130,8 +129,6 @@
 
   
 
-
-  
 
   </body>
 </html>

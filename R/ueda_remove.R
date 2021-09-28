@@ -1,6 +1,6 @@
 #' Remove outliers
 #'
-#' A generic functin to remove outliers in a numeric vector using Ueda's method.
+#' A generic function to remove outliers in a numeric vector using Ueda's method.
 #' @param x A numeric vector
 #' @param smax The maximum number of outliers to be detected. By default, smax = 3.
 #'

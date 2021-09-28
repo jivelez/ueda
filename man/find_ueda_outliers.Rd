@@ -4,7 +4,7 @@
 \alias{find_ueda_outliers}
 \title{Automatic detection and removal of outliers using Ueda's method.}
 \usage{
-find_ueda_outliers(x, smax = 3)
+find_ueda_outliers(x, smax = 5)
 }
 \arguments{
 \item{x}{A numeric vector}

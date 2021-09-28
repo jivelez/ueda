@@ -29,7 +29,7 @@
 #' x <- sample(x)
 #' # removes up to 5 outliers
 #' find_ueda_outliers(x, smax = 5)
-find_ueda_outliers <- function(x, smax = 3){
+find_ueda_outliers <- function(x, smax = 5){
 
 	# Ut function
 	# x = data; s = number of outliers
