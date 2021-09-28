@@ -74,10 +74,9 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#ueda-" class="anchor"></a>ueda <img src="reference/figures/logo.png" align="right" alt="" width="120">
 </h1></div>
-<hr>
 <p>An R package with useful functions to automatically detect and remove outliers via the Ueda’s method. For more information see</p>
-<p>Marmolejo-Ramos, F., Vélez, J.I. &amp; Romão, X. Automatic detection of discordant outliers via the Ueda’s method. J Stat Distrib App <strong>2</strong>, 8 (2015). <a href="https://doi.org/10.1186/s40488-015-0031-y" class="uri">https://doi.org/10.1186/s40488-015-0031-y</a></p>
-<p>You can visit the <a href="https://fhernanb.github.io/stests/index.html">package website</a> to explore the vignettes (articles) and function reference.</p>
+<p>Marmolejo-Ramos, F., Vélez, J.I. &amp; Romão, X. Automatic detection of discordant outliers via the Ueda’s method. <em>J Stat Distrib App</em> <strong>2</strong>, 8 (2015). <a href="https://doi.org/10.1186/s40488-015-0031-y" class="uri">https://doi.org/10.1186/s40488-015-0031-y</a></p>
+<p>You can visit the <a href="https://jivelez.github.io/ueda/index.html">package website</a> to explore the vignettes (articles) and function reference.</p>
 <div id="installation" class="section level3">
 <h3 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h3>
@@ -85,6 +84,72 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/">'devtools'</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span>
 <span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st">'ueda'</span><span class="op">)</span><span class="op">)</span> <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">'jivelez/ueda'</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="examples" class="section level3">
+<h3 class="hasAnchor">
+<a href="#examples" class="anchor"></a>Examples</h3>
+<div id="example-1" class="section level4">
+<h4 class="hasAnchor">
+<a href="#example-1" class="anchor"></a>Example 1</h4>
+<p>First we generate a numeric vector <code>x</code> as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># random seed for reproducibility</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">13</span><span class="op">)</span>
+
+<span class="co"># generate data and introduce 5 outliers</span>
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">300</span>, <span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">400</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span>
+
+<span class="co"># shuffle the data</span>
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+<span class="va">x</span></code></pre></div>
+<p>To get the full output after applying Ueda’s method on this data, we use the <code><a href="reference/find_ueda_outliers.html">find_ueda_outliers()</a></code> outliers as follows. In this particular case, we use <code>smax = 5</code> to detect up to 5 outliers in the numeric vector <code>x</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># run full Ueda's method and detect up to 5 outliers</span>
+<span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/find_ueda_outliers.html">find_ueda_outliers</a></span><span class="op">(</span><span class="va">x</span>, smax <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="va">out</span></code></pre></div>
+<p>Note that <code>out</code> is a <code>list</code> of four elements: <code>Ut</code>, <code>label</code>, <code>x</code> and <code>x_new</code>. For more information type <code><a href="reference/find_ueda_outliers.html">?find_ueda_outliers</a></code> in the R console.</p>
+</div>
+<div id="example-2" class="section level4">
+<h4 class="hasAnchor">
+<a href="#example-2" class="anchor"></a>Example 2</h4>
+<p>In this example, we use the numeric vector <code>x</code> as input and automatically detect up to <code>smax = 5</code> outliers and remove them with the <code><a href="reference/ueda_remove.html">ueda_remove()</a></code> function:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># remove up to 5 outliers from vector `x`</span>
+<span class="va">x_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ueda_remove.html">ueda_remove</a></span><span class="op">(</span><span class="va">x</span>, smax <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="va">x_new</span></code></pre></div>
+<p>Note that the <code>x_new</code> object is similar to <code>x</code> but has no outliers. For more information type <code><a href="reference/ueda_remove.html">?ueda_remove</a></code> in the R console.</p>
+</div>
+<div id="example-3" class="section level4">
+<h4 class="hasAnchor">
+<a href="#example-3" class="anchor"></a>Example 3</h4>
+<p>Suppose we have the following <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code>:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## create some data</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">721</span><span class="op">)</span>
+<span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span>
+<span class="va">d</span></code></pre></div>
+<p>Sometimes we would like to get the indexes of the outliers in the vector <code>x</code>. These indexes can be further used in combination with the <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code> function to reduce the number of registers in a <code>d</code>.</p>
+<p>One way of accomplishing this is using the <code>udea_index()</code> function as follows:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># get indexes and positions of up to 5 outliers</span>
+<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ueda_index.html">ueda_index</a></span><span class="op">(</span><span class="va">x</span>, smax <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="va">result</span></code></pre></div>
+<p>The object <code>result</code> is a <code><a href="https://rdrr.io/r/base/list.html">list()</a></code> of two components: <code>indexes</code> and <code>positions</code>. For more information type <code><a href="reference/ueda_index.html">?ueda_index</a></code> in the R console.</p>
+<p>To get the <code>indexes</code> from the object <code>result</code> we proceed as follows:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## indexes of outliers</span>
+<span class="va">idx</span> <span class="op">&lt;-</span> <span class="va">result</span><span class="op">$</span><span class="va">indexes</span>
+<span class="va">idx</span></code></pre></div>
+<p>The object <code>idx</code> can be used to <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code> the <code>d</code>. To get the complete data set for the outlier observations, we do</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## data for outlier observations</span>
+<span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">d</span>, <span class="va">idx</span><span class="op">)</span></code></pre></div>
+<p>The data for those observations that are not considered outliers can be retrieved by doing</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## data for no outlier observations</span>
+<span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">d</span>, <span class="op">!</span><span class="va">idx</span><span class="op">)</span></code></pre></div>
+</div>
 </div>
 </div>
 

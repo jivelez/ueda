@@ -28,5 +28,5 @@ ueda_index <- function(x, smax = 5){
   res <- ueda_remove(x = x, smax = smax)
   index <- !x %in% res
   positions <- which(index)
-  list(index = index, positions = positions)
+  list(indexes = index, positions = positions)
 }
