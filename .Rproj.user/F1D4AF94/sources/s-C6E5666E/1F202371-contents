@@ -4,7 +4,7 @@
 #'
 #' @param x A numeric vector
 #' @param smax The maximum number of outliers to be detected. By default, smax = 3.
-#' @param na.rm Whether NAs should be removed or not for calculating the mean. By default na.rm = TRUE.
+#'
 #'
 #' @return A list of 4 components:
 #'
@@ -19,6 +19,7 @@
 #' @export
 #'
 #' @references Marmolejo-Ramos, F., Vélez, J.I. & Romão, X. Automatic detection of discordant outliers via the Ueda’s method. J Stat Distrib App 2, 8 (2015). \url{https://doi.org/10.1186/s40488-015-0031-y}
+#'
 #' @examples
 #' # random seed for reproducibility
 #' set.seed(13)
@@ -28,12 +29,11 @@
 #' x <- sample(x)
 #' # removes up to 5 outliers
 #' find_ueda_outliers(x, smax = 5)
-# na.rm is passed when calculating mean(x, na.rm = na.rm)
-find_ueda_outliers <- function(x, smax = NULL, na.rm = TRUE){
+find_ueda_outliers <- function(x, smax = 3){
 
 	# Ut function
 	# x = data; s = number of outliers
-	ut <- function(x, s, na.rm = na.rm){
+	ut <- function(x, s, na.rm = TRUE){
 		n <- length(x)
 		sigma <- sqrt(sum((x-mean(x))^2)/n) ###### see footnote 4
 

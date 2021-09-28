@@ -1,0 +1,30 @@
+## download and install
+if(!require('devtools')) install.packages('devtools')
+if(!require('ueda')) devtools::install_github('jivelez/ueda', force = TRUE)
+
+## load
+require(ueda)
+
+## check help
+library(help = 'ueda')
+
+## example
+set.seed(13)
+
+# introduce 5 outliers
+x <- c(rnorm(25, 300, 10), rnorm(5, 400, 5))
+
+# shuffle the data
+x <- sample(x)
+x
+
+# removes up to 5 outliers
+ueda_remove(x, smax = 5)
+
+# get indexes
+ueda_index(x, smax = 5)
+
+# find outliers and get full output
+find_ueda_outliers(x, smax = 5)
+
+

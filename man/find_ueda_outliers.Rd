@@ -4,14 +4,12 @@
 \alias{find_ueda_outliers}
 \title{Automatic detection and removal of outliers using Ueda's method.}
 \usage{
-find_ueda_outliers(x, smax = NULL, na.rm = TRUE)
+find_ueda_outliers(x, smax = 3)
 }
 \arguments{
 \item{x}{A numeric vector}
 
 \item{smax}{The maximum number of outliers to be detected. By default, smax = 3.}
-
-\item{na.rm}{Whether NAs should be removed or not for calculating the mean. By default na.rm = TRUE.}
 }
 \value{
 A list of 4 components:

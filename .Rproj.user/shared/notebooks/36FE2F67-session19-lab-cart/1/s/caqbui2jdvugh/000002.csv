@@ -1,0 +1,5 @@
+"0","## lectura de datos"
+"0","d <- read.table(""https://www.dropbox.com/s/bxea58hj951vi7k/datos-p1-caso2.txt?dl=1"", "
+"0","                header = TRUE)"
+"0","## primeras 3 filas"
+"0","head(d, 3)"

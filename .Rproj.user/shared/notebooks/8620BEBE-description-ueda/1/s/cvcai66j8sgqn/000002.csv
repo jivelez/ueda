@@ -1,0 +1,6 @@
+"0","## download and install"
+"0","if(!require('devtools')) install.packages('devtools')"
+"0","if(!require('ueda')) devtools::install_github('jivelez/ueda', force = TRUE)"
+"0",""
+"0","## load"
+"0","library(ueda)"
