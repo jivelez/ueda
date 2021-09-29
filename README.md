@@ -16,7 +16,7 @@ To install the latest development version of the package from GitHub use:
 
 ```r
 if(!require('devtools')) install.packages('devtools')
-if(!require('ueda')) devtools::install_github('jivelez/ueda', force = TRUE)
+devtools::install_github('jivelez/ueda', force = TRUE)
 require(ueda)
 ```
 
