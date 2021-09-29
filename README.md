@@ -15,8 +15,13 @@ You can visit the [package website](https://jivelez.github.io/ueda/index.html) t
 To install the latest development version of the package from GitHub use:
 
 ```r
+## download and install necessary components
 if(!require('devtools')) install.packages('devtools')
 require('devtools')
+
+if(!require('here')) install.packages('here')
+require('here')
+
 devtools::install_github('jivelez/ueda', force = TRUE)
 require(ueda)
 ```
