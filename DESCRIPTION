@@ -7,7 +7,7 @@ Authors@R: c(
            family="Vélez", 
            email="jvelezv@uninorte.edu.co", 
            role = c("aut", "cre"), 
-           comment = c(ORCID = "000-0002-3146-7899")),
+           comment = c(ORCID = "0000-0002-3146-7899")),
     person(given="Luis F.", 
            family="Machado", 
            email="lfmachado@uninorte.edu.co", 
