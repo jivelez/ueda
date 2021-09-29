@@ -1,7 +1,0 @@
-"0","p <- apply(d[,-c(1, 2)], 2, tapply, d$y, function(x) 100*mean(x == 1))"
-"0","p <- t(p)"
-"0","freq <- data.frame(symptom = rep(1:NROW(p), 2), p = c(p[,1], p[,2]), adhd = rep(c('no', 'yes'), each = 20))"
-"0","require(ggplot2)"
-"0","ggplot(freq, aes(x = symptom, y = p, fill = adhd, col - adhd)) + geom_line(aes(color = adhd)) + "
-"0","  ylab(""Percentage (x100)"") +"
-"0","  theme_minimal()"
